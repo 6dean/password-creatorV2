@@ -23,7 +23,18 @@ export default function PasswordPage() {
     setSpecials(!specials);
   };
 
-  console.log(numbers, letters, specials);
+  function generateRandomString() {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    const numbers = "1234567890";
+    const specials = "!#$%&*+<=>?@{}~'";
+
+    let result = "";
+    for (let i = 0; i < longer; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      result += characters[randomIndex];
+    }
+    return result;
+  }
 
   return (
     <div>
