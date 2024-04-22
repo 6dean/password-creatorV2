@@ -1,5 +1,6 @@
 "use client";
 import { React, useState } from "react";
+import "./styles.css";
 
 export default function PasswordPage() {
   const [longer, setLonger] = useState(8);
@@ -80,7 +81,7 @@ export default function PasswordPage() {
   };
 
   return (
-    <div>
+    <div className="box">
       <div>
         <div>Nombre de caractères Max 32</div>
         <div>
