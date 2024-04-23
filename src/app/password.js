@@ -1,5 +1,6 @@
 "use client";
 import { React, useState } from "react";
+import "./reset.css";
 import "./styles.css";
 
 export default function PasswordPage() {
@@ -64,7 +65,6 @@ export default function PasswordPage() {
       };
       generatePassword();
     } else if (!specials && !numbers) {
-      console.log("special is fake / numbers is fake");
       const generatePassword = () => {
         const characters =
           "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -80,10 +80,12 @@ export default function PasswordPage() {
     }
   };
 
+  console.log(longer);
+
   return (
     <div className="box">
-      <div>
-        <div>Nombre de caractères Max 32</div>
+      <div className="element-choice">
+        <div>Nombre de caractères</div>
         <div>
           <input
             onChange={submitLonger}
@@ -94,22 +96,24 @@ export default function PasswordPage() {
           />
         </div>
       </div>
-      <div>
+      <div className="element-choice">
         <div>Mettre des chiffres</div>
         <div>
           <input type="checkbox" checked={numbers} onChange={submitNumbers} />
         </div>
       </div>
-      <div>
+      <div className="element-choice">
         <div>Mettre des caractères spéciaux</div>
         <div>
           <input type="checkbox" checked={specials} onChange={submitSpecials} />
         </div>
       </div>
-      <div>
+      <div className="element-button">
         <input type="button" value="Create" onClick={functionPass} />
       </div>
-      <div>{password}</div>
+      <div className="box-password">
+        <div>{password}</div>
+      </div>
     </div>
   );
 }
