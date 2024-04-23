@@ -107,7 +107,7 @@ export default function PasswordPage() {
         </div>
       </div>
       <div>
-        <input type="button" onClick={functionPass} />
+        <input type="button" value="Create" onClick={functionPass} />
       </div>
       <div>{password}</div>
     </div>
