@@ -80,8 +80,6 @@ export default function PasswordPage() {
     }
   };
 
-  console.log(longer);
-
   return (
     <div className="box">
       <div className="element-choice">
