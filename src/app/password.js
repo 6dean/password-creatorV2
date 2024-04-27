@@ -83,7 +83,7 @@ export default function PasswordPage() {
   return (
     <div className="box">
       <div className="element-choice">
-        <div>Add characters</div>
+        <div>{longer == 32 ? "Custom length (Maximum)" : "Custom length"}</div>
         <div>
           <input
             onChange={submitLonger}
@@ -107,7 +107,7 @@ export default function PasswordPage() {
         </div>
       </div>
       <div className="element-button">
-        <input type="button" value="Create" onClick={functionPass} />
+        <input type="button" value="Generate" onClick={functionPass} />
       </div>
       <div className="box-password">
         <div className="password-style">

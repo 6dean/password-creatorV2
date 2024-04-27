@@ -1,11 +1,14 @@
 .box {
   border: 2px black solid;
+  max-width: 50vh;
+  background-color: antiquewhite;
 }
 
 .element-choice {
   display: flex;
   justify-content: space-between;
   border: 2px red solid;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .box-password {
@@ -24,4 +27,11 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   font-size: 22px;
+}
+
+@media (max-width: 500px) {
+  .password-style {
+    font-size: 17px;
+    font-weight: 500;
+  }
 }
