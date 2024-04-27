@@ -19,9 +19,15 @@
   background-color: antiquewhite;
 }
 
+.box-style {
+  border: 1px solid pink;
+  min-width: 70vh;
+}
+
 .element-choice {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 7px;
   border: 2px red solid;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }

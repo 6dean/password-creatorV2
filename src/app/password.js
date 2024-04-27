@@ -80,6 +80,15 @@ export default function PasswordPage() {
     }
   };
 
+  const copyToClipboard = () => {
+    const textField = document.createElement("textarea");
+    textField.innerText = password;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand("copy");
+    textField.remove();
+  };
+
   return (
     <div className="page-password">
       <div className="element-title">
@@ -87,7 +96,7 @@ export default function PasswordPage() {
       </div>
 
       <div className="box">
-        <div>
+        <div className="box-style">
           <div className="element-choice">
             <div>
               {longer == 32 ? "Custom length (Maximum)" : "Custom length"}
@@ -128,6 +137,9 @@ export default function PasswordPage() {
           <div className="box-password">
             <div className="password-style">
               {password ? password : "Create your password"}
+            </div>
+            <div>
+              <input type="button" value="Copy" onClick={copyToClipboard} />
             </div>
           </div>
         </div>
