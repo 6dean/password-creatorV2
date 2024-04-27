@@ -110,7 +110,9 @@ export default function PasswordPage() {
         <input type="button" value="Create" onClick={functionPass} />
       </div>
       <div className="box-password">
-        <div>{password}</div>
+        <div className="password-style">
+          {password ? password : "Creer votre password"}
+        </div>
       </div>
     </div>
   );
