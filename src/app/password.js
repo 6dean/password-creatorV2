@@ -54,7 +54,7 @@ export default function PasswordPage() {
     if (!specials && numbers) {
       const generatePassword = () => {
         const characters =
-          "A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6abcdefghijklmnopqrstuvwxyz1234567890";
+          "A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6abcdefghijklmnopqrstuvwxyz";
 
         let result = "";
         for (let i = 0; i < longer; i++) {
