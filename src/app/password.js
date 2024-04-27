@@ -81,37 +81,55 @@ export default function PasswordPage() {
   };
 
   return (
-    <div className="box">
-      <div className="element-choice">
-        <div>{longer == 32 ? "Custom length (Maximum)" : "Custom length"}</div>
+    <div className="page-password">
+      <div className="element-title">
+        <div>PasswordForge</div>
+      </div>
+
+      <div className="box">
         <div>
-          <input
-            onChange={submitLonger}
-            value={longer}
-            type="number"
-            min="8"
-            max="32"
-          />
-        </div>
-      </div>
-      <div className="element-choice">
-        <div>Add numbers</div>
-        <div>
-          <input type="checkbox" checked={numbers} onChange={submitNumbers} />
-        </div>
-      </div>
-      <div className="element-choice">
-        <div>Add special characters</div>
-        <div>
-          <input type="checkbox" checked={specials} onChange={submitSpecials} />
-        </div>
-      </div>
-      <div className="element-button">
-        <input type="button" value="Generate" onClick={functionPass} />
-      </div>
-      <div className="box-password">
-        <div className="password-style">
-          {password ? password : "Create your password"}
+          <div className="element-choice">
+            <div>
+              {longer == 32 ? "Custom length (Maximum)" : "Custom length"}
+            </div>
+            <div>
+              <input
+                onChange={submitLonger}
+                value={longer}
+                type="number"
+                min="8"
+                max="32"
+              />
+            </div>
+          </div>
+          <div className="element-choice">
+            <div>Add numbers</div>
+            <div>
+              <input
+                type="checkbox"
+                checked={numbers}
+                onChange={submitNumbers}
+              />
+            </div>
+          </div>
+          <div className="element-choice">
+            <div>Add special characters</div>
+            <div>
+              <input
+                type="checkbox"
+                checked={specials}
+                onChange={submitSpecials}
+              />
+            </div>
+          </div>
+          <div className="element-button">
+            <input type="button" value="Generate" onClick={functionPass} />
+          </div>
+          <div className="box-password">
+            <div className="password-style">
+              {password ? password : "Create your password"}
+            </div>
+          </div>
         </div>
       </div>
     </div>
