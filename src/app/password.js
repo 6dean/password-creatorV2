@@ -83,7 +83,7 @@ export default function PasswordPage() {
   return (
     <div className="box">
       <div className="element-choice">
-        <div>Nombre de caractères</div>
+        <div>Add characters</div>
         <div>
           <input
             onChange={submitLonger}
@@ -95,13 +95,13 @@ export default function PasswordPage() {
         </div>
       </div>
       <div className="element-choice">
-        <div>Mettre des chiffres</div>
+        <div>Add numbers</div>
         <div>
           <input type="checkbox" checked={numbers} onChange={submitNumbers} />
         </div>
       </div>
       <div className="element-choice">
-        <div>Mettre des caractères spéciaux</div>
+        <div>Add special characters</div>
         <div>
           <input type="checkbox" checked={specials} onChange={submitSpecials} />
         </div>
@@ -111,7 +111,7 @@ export default function PasswordPage() {
       </div>
       <div className="box-password">
         <div className="password-style">
-          {password ? password : "Creer votre password"}
+          {password ? password : "Create your password"}
         </div>
       </div>
     </div>
