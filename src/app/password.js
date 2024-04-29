@@ -1,5 +1,7 @@
 "use client";
 import { React, useState } from "react";
+import Image from "next/image";
+import Logo from "./password.svg";
 import "./reset.css";
 import "./styles.css";
 
@@ -8,15 +10,14 @@ export default function PasswordPage() {
   const [numbers, setNumbers] = useState(false);
   const [specials, setSpecials] = useState(false);
   const [password, setPassword] = useState("");
+  const [CopyEff, setCopyEff] = useState("copy");
 
   const submitLonger = (event) => {
     setLonger(event.target.value);
   };
-
   const submitNumbers = () => {
     setNumbers(!numbers);
   };
-
   const submitSpecials = () => {
     setSpecials(!specials);
   };
@@ -87,12 +88,18 @@ export default function PasswordPage() {
     textField.select();
     document.execCommand("copy");
     textField.remove();
+    setCopyEff("✓");
+
+    setTimeout(() => {
+      setCopyEff("copy");
+    }, 3000);
   };
 
   return (
     <div className="page-password">
       <div className="element-title">
-        <div>PasswordForge</div>
+        <div className="title">PasswordForge </div>
+        <Image src={Logo} alt="Logo" width={20} />
       </div>
 
       <div className="box">
@@ -136,10 +143,16 @@ export default function PasswordPage() {
           </div>
           <div className="box-password">
             <div className="password-style">
-              {password ? password : "Create your password"}
+              {password ? password : "waiting..."}
             </div>
-            <div>
-              <input type="button" value="Copy" onClick={copyToClipboard} />
+            <div className="copy-style">
+              {password ? (
+                <input
+                  type="button"
+                  value={CopyEff}
+                  onClick={copyToClipboard}
+                />
+              ) : null}
             </div>
           </div>
         </div>
