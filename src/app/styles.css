@@ -62,12 +62,11 @@
 
   .box-style {
     border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(170, 101, 16);
     border-radius: 20px;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .box-style {
     min-width: 70vh;
   }
